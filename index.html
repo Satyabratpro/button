@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css" media="all">
+    
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+  background:#262626;
+}
+
+/* ---------- base state ---------- */
+.btn{
+  border:5px solid black;
+  padding:12px 28px;
+  border-radius:20px;
+  background:transparent;
+  color:#fff;
+  font-size:1.1rem;
+  cursor:pointer;
+
+  /* one-time fade for every property we’ll toggle */
+  transition:
+    box-shadow .3s ease,
+    border-color .3s ease,
+    color .3s ease,
+    transform .15s ease;
+}
+
+/* ---------- desktop hover ---------- */
+.btn:hover{
+  box-shadow:0 0 20px 8px rgba(255,255,255,.9);
+  border-color:#fff;
+  color:#fff;
+}
+
+/* ---------- press-and-hold (touch or mouse) ---------- */
+.btn:active{
+  box-shadow:0 0 20px 8px rgba(255,255,255,.9);
+  border-color:#fff;
+  color:#fff;
+  transform:scale(.96);          /* little press-in squash */
+}
+
+  </style>
+</head>
+<body>
+  <div class="btn">
+    <h3>hover cursor or hold</h3>
+  </div>
+</body>
+</html>
